@@ -43,7 +43,9 @@ configure_catppuccin-mocha-grub-theme-git() {
 ## Deps
 which paru &>/dev/null || "${BASH_SOURCE%/*}/08-paru.sh"
 
-gpg --keyserver hkps://pgp.surf.nl --recv-key 93BDB53CD4EBC740 &>/dev/null
+for k in 8DFE60B7327D52D6 93BDB53CD4EBC740; do
+  gpg --list-keys "$k" &>/dev/null || gpg --keyserver hkps://pgp.surf.nl --recv-key "$k"
+done
 
 ## Install programs with paru
 SCRIPT_PATH=$(readlink -f "${BASH_SOURCE[0]}")
