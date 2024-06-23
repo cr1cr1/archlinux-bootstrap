@@ -28,3 +28,6 @@ for s in sshd systemd-modules-load; do
 done
 
 #sudo sensors-detect
+
+systemctl --user enable ssh-agent
+systemctl --user restart ssh-agent
