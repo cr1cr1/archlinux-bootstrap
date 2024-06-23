@@ -66,6 +66,7 @@ for f in $LISTS; do
     printf -- '-%.0s' $(seq 1 "$(tput cols)")
     echo " + Installing $line"
 
+    # shellcheck disable=SC2086
     paru -Sy --noconfirm $line
 
     func="configure_${line/\//_}"
