@@ -40,6 +40,14 @@ configure_catppuccin-mocha-grub-theme-git() {
   sudo grub-mkconfig -o /boot/grub/grub.cfg
 }
 
+configure_gnome-ssh-askpass4-git() {
+  if grep -q SSH_ASKPASS /etc/environment; then
+    sudo sed -i -E 's,^#*(SSH_ASKPASS=).+,\1/usr/lib/ssh/gnome-ssh-askpass4,' /etc/environment
+  else
+    echo 'SSH_ASKPASS=/usr/lib/ssh/gnome-ssh-askpass4' | sudo tee -a /etc/environment >/dev/null
+  fi
+}
+
 ## Deps
 which paru &>/dev/null || "${BASH_SOURCE%/*}/08-paru.sh"
 

@@ -19,6 +19,7 @@ fluxcd
 fzf-tab-completion-git
 git-credential-keepassxc
 glow
+gnome-ssh-askpass4-git
 go-mtpfs-git
 go-yq
 helix
