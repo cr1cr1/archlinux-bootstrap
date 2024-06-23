@@ -1,0 +1,7 @@
+# name what where
+win_c UUID=01D97D07D7C008F0 /mnt/win/c
+win_d UUID=01D8D9D274572F60 /mnt/win/d
+win_e UUID=01D725A1BB0D4390 /mnt/win/e
+win_f UUID=01D8D8F54ECDFFE0 /mnt/win/f
+win_g UUID=01D8D9C685063C40 /mnt/win/g
+win_h UUID=01DAB89FEB0E6170 /mnt/win/h

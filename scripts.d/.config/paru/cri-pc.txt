@@ -1,0 +1,6 @@
+minigalaxy
+proton
+steam
+steamcmd
+steam-tui
+tauon
