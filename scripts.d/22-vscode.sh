@@ -24,3 +24,9 @@ _LATEST_VERSION=$(curl -sS "https://api.github.com/repos/${_GITHUB_REPO}/release
 ## Download and install
 curl -L 'https://code.visualstudio.com/sha/download?build=stable&os=linux-x64' | \
   sudo tar -xzf - -C "${VSCODE_HOME}" --strip-components=1
+
+DESKTOP_FILE_DIR=/usr/local/share/applications
+[[ ! -d "$DESKTOP_FILE_DIR" ]] && sudo mkdir -p "$DESKTOP_FILE_DIR"
+sudo cp -uva "${BASH_SOURCE%/*}/usr/local/share/applications/vscode.desktop" "$DESKTOP_FILE_DIR"
+
+sudo update-desktop-database
