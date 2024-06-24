@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Thunderbird
+GenericName=Mail and Calendar Client
+Comment=Mail and Calendar Client
+Icon=org.mozilla.Thunderbird
+X-GNOME-UsesNotifications=true
+Exec=/usr/local/thunderbird/thunderbird %u
+Actions=
+MimeType=text/calendar;text/x-vcalendar;x-scheme-handler/webcal;x-scheme-handler/webcals;application/x-extension-ics;text/x-vcard;application/mbox;application/x-starmail;message/rfc822;x-scheme-handler/mailto;x-scheme-handler/mid;x-scheme-handler/news;x-scheme-handler/snews;x-scheme-handler/nntp;x-scheme-handler/nntp;x-scheme-handler/feed;application/rss+xml;application/x-extension-rss;
+Categories=Email;Network;
+Keywords=mail;email;calendar;
+StartupWMClass=Mail

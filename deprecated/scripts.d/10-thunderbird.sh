@@ -23,3 +23,9 @@ _LATEST_VERSION=$(curl -sS "https://www.thunderbird.net/en-US/thunderbird/releas
 ## Download and install
 curl -L "https://download.mozilla.org/?product=thunderbird-${_LATEST_VERSION#* }-SSL&os=linux64&lang=en-US" | \
   sudo tar -xjf - -C "${THUNDERBIRD_HOME}" --strip-components=1
+
+DESKTOP_FILE_DIR=/usr/local/share/applications
+[[ ! -d "$DESKTOP_FILE_DIR" ]] && sudo mkdir -p "$DESKTOP_FILE_DIR"
+sudo cp -uva "${BASH_SOURCE%/*}/usr/local/share/applications/thunderbird.desktop" "$DESKTOP_FILE_DIR"
+
+sudo update-desktop-database
