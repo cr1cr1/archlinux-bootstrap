@@ -14,7 +14,8 @@ $INSTALLER mc tldr \
   wget curl inetutils net-tools dnsutils mtr rsync ssh-tools nmap tcpdump wireguard-tools networkmanager-openvpn \
   eza gdu duf fd fzf skim lsof tree lshw lnav \
   tmux zsh zsh-syntax-highlighting bat zoxide stern screenfetch \
-  scrcpy android-tools
+  scrcpy android-tools \
+  go
 
 ## System files
 for d in etc usr; do
