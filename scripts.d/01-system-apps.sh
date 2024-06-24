@@ -15,7 +15,7 @@ $INSTALLER mc tldr \
   eza gdu duf fd fzf skim lsof tree lshw lnav \
   tmux zsh zsh-syntax-highlighting bat zoxide stern screenfetch \
   scrcpy android-tools \
-  go
+  go python-pip kubectl
 
 ## System files
 for d in etc usr; do
