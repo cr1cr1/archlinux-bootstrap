@@ -26,4 +26,4 @@ grep -qP "Module\s+$VERSION" /proc/driver/nvidia/version && exit 0
 $INSTALLER nvtop linux-headers
 [[ -f /tmp/nvidia-driver.run ]] || \
   curl -L "https://us.download.nvidia.com/XFree86/Linux-x86_64/${VERSION}/NVIDIA-Linux-x86_64-${VERSION}.run" > /tmp/nvidia-driver.run
-sudo bash /tmp/nvidia-driver.run
+sudo bash /tmp/nvidia-driver.run -s
