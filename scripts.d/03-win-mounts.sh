@@ -33,14 +33,14 @@ Description=Mount unit for $NAME
 [Mount]
 What=$WHAT
 Where=$WHERE
-Type=ntfs
-Options=auto,rw,uid=1000,gid=1000,dmask=027,fmask=077,dev,exec,noatime,iocharset=utf8,windows_names,suid
+Type=ntfs-3g
+Options=auto,rw,uid=1000,gid=1000,dmask=027,fmask=077,dev,exec,noatime,iocharset=utf8,windows_names,big_writes,suid
 
 [Install]
 WantedBy=multi-user.target
 !
 
   sudo systemctl daemon-reload
-  sudo systemctl enable "$SERVICE_FILE"
+  sudo systemctl enable "$SERVICE_FILE" || continue
   sudo systemctl restart "$SERVICE_FILE" || continue
 done < "$MOUNTS_FILE"
