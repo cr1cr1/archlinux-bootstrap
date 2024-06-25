@@ -12,7 +12,7 @@ $INSTALLER mc tldr \
   openssh age openssl-1.1 \
   htop btop strace systemctl-tui i2c-tools lm_sensors hwinfo hddtemp \
   wget curl inetutils net-tools dnsutils mtr rsync ssh-tools nmap tcpdump wireguard-tools networkmanager-openvpn \
-  eza gdu duf fd fzf skim lsof tree lshw lnav \
+  eza gdu duf fd fzf skim lsof tree lshw lnav xfsprogs \
   tmux zsh zsh-syntax-highlighting bat zoxide stern screenfetch \
   scrcpy android-tools \
   go python-pip kubectl
