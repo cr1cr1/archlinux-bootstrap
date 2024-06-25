@@ -38,6 +38,7 @@ p7zip-gui
 papirus-folders-catppuccin-git
 parui
 remmina-plugin-rustdesk
+rustdesk-bin
 scribus
 signal-desktop
 superfile-bin
