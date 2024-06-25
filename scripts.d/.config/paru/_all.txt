@@ -2,7 +2,6 @@
 
 adwaita-qt5-git adwaita-qt6-git
 albert
-amberol
 anytype-electron-bin
 atuin
 bibata-cursor-theme
