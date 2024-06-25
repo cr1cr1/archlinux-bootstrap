@@ -12,10 +12,11 @@ INSTALLER='sudo pacman -Sy --noconfirm'
 $INSTALLER budgie network-manager-applet papirus-icon-theme budgie-desktop-view arc-gtk-theme \
   gnome-themes-extra gnome-console gnome-calculator gnome-system-monitor gnome-keyring gnome-packagekit gnome-logs \
   gvfs-smb appmenu-gtk-module dconf-editor font-manager xorg-xhost \
-  eog-plugins libheif evince \
+  eog-plugins libheif evince strawberry vlc obs-studio \
   meld nemo-preview nemo-share nemo-theme-glacier \
-  gedit baobab vlc doublecmd-gtk2 libunrar freerdp remmina transmission-remote-gtk grsync gparted gsmartcontrol xarchiver \
+  gedit baobab doublecmd-gtk2 libunrar freerdp remmina transmission-remote-gtk grsync gparted gsmartcontrol xarchiver \
   keepassxc x11-ssh-askpass \
   openrgb \
   thunderbird \
-  virt-manager qemu-desktop
+  virt-manager qemu-desktop \
+  discord
