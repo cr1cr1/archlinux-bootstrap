@@ -4,7 +4,17 @@ set -u -e -o pipefail
 
 trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
 
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
+
+## Deps
+which paru &>/dev/null || "${BASH_SOURCE%/*}/00-paru.sh"
+which lshw &>/dev/null || $INSTALLER lshw
+
+## NVIDIA Drivers
+if [[ $(sudo lshw -C video -json | jq -r '.[].vendor') == 'NVIDIA Corporation' ]]; then
+  $INSTALLER nvidia
+  paru -Sy --noconfirm --needed nvidia-patch
+fi
 
 ## System apps
 $INSTALLER mc tldr \
@@ -12,7 +22,7 @@ $INSTALLER mc tldr \
   openssh age openssl-1.1 \
   htop btop strace systemctl-tui i2c-tools lm_sensors hwinfo hddtemp \
   wget curl inetutils net-tools dnsutils mtr rsync ssh-tools nmap tcpdump wireguard-tools networkmanager-openvpn \
-  eza gdu duf fd fzf skim lsof tree lshw lnav xfsprogs \
+  eza gdu duf fd fzf skim lsof tree lnav xfsprogs \
   tmux zsh zsh-syntax-highlighting bat zoxide stern screenfetch \
   scrcpy android-tools \
   go python-pip kubectl
