@@ -9,7 +9,7 @@ _BIN_DEST=/usr/local/bin
 _GITHUB_REPO=Morganamilo/paru
 
 ## Install deps
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 for c in curl jq tar; do
   which $c &>/dev/null || $INSTALLER $c
 done
