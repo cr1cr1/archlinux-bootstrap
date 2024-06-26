@@ -8,7 +8,7 @@ VSCODE_HOME="${VSCODE_HOME:-/usr/local/vscode}"
 _GITHUB_REPO=microsoft/vscode
 
 ## Install deps
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 for c in curl jq tar; do
   which $c &>/dev/null || $INSTALLER $c
 done

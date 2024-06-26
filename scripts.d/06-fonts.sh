@@ -7,7 +7,7 @@ trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
 _GITHUB_REPO=ryanoasis/nerd-fonts
 
 ## Install deps
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 pacman -Q noto-fonts-emoji || $INSTALLER noto-fonts-emoji
 which unzip &> /dev/null || $INSTALLER unzip
 

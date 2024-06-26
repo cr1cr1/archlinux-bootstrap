@@ -17,7 +17,7 @@ $INI_CMD options RemoteFileSigLevel Optional | sudo tee /etc/pacman.conf >/dev/n
 ## Enable multilib (32bit repo)
 $INI_CMD multilib Include /etc/pacman.d/mirrorlist | sudo tee /etc/pacman.conf >/dev/null
 
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 ## Install deps
 for c in sed grep efibootmgr os-prober; do
   which $c &>/dev/null || $INSTALLER $c

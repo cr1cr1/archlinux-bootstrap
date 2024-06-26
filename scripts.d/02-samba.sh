@@ -6,7 +6,7 @@ trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
 
 SMB_DEFAULT_GROUP=${SMB_DEFAULT_GROUP:-smb}
 
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 $INSTALLER samba avahi
 which fd &>/dev/null || $INSTALLER fd
 which hostname &>/dev/null || $INSTALLER inetutils

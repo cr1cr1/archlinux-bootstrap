@@ -4,7 +4,7 @@ set -u -e -o pipefail
 
 trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
 
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 which ntfs-3g &>/dev/null || $INSTALLER ntfs-3g
 
 SERVICE_DIR=/usr/local/lib/systemd/system
@@ -34,7 +34,7 @@ Description=Mount unit for $NAME
 What=$WHAT
 Where=$WHERE
 Type=ntfs-3g
-Options=auto,rw,uid=1000,gid=1000,dmask=027,fmask=077,dev,exec,noatime,iocharset=utf8,windows_names,big_writes,suid
+Options=auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=077,dev,exec,noatime,iocharset=utf8,windows_names,big_writes,suid
 
 [Install]
 WantedBy=multi-user.target

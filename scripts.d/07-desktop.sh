@@ -8,7 +8,7 @@ trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
 grep -qP '^WEBKIT_DISABLE_DMABUF_RENDERER' /etc/environment || \
   sudo sed -i -E 's,^[#\s]*(WEBKIT_DISABLE_DMABUF_RENDERER)=1,\1=1,' /etc/environment
 
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 $INSTALLER budgie network-manager-applet papirus-icon-theme budgie-desktop-view arc-gtk-theme \
   gnome-themes-extra gnome-console gnome-calculator gnome-system-monitor gnome-keyring gnome-packagekit gnome-logs \
   gvfs-smb appmenu-gtk-module dconf-editor font-manager xorg-xhost \

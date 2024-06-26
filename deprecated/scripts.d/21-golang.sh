@@ -8,7 +8,7 @@ GO_VERSION=${GO_VERSION:-go1.22.4}
 GO_HOME="${GO_HOME:-/usr/local/go}"
 
 ## Install deps
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 for c in curl tar; do
   which $c &>/dev/null || $INSTALLER $c
 done

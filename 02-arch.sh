@@ -10,7 +10,7 @@ if [[ $EUID -eq 0 ]]; then
 fi
 
 ## Deps
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 which fd &>/dev/null || $INSTALLER fd
 which tput &>/dev/null || $INSTALLER ncurses
 which seq &>/dev/null || $INSTALLER coreutils

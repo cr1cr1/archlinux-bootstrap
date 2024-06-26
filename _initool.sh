@@ -9,7 +9,7 @@ _BIN_DEST=/usr/local/bin
 _GITHUB_REPO=dbohdan/initool
 
 ## Install deps
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 for c in curl jq; do
   which $c &>/dev/null || $INSTALLER $c
 done

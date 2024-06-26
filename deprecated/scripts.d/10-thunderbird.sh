@@ -5,7 +5,7 @@ set -u -e -o pipefail
 trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
 
 ## Install deps
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 for c in curl xmllint tar; do
   which $c &>/dev/null || $INSTALLER $c
 done

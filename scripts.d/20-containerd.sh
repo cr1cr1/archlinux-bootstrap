@@ -9,7 +9,7 @@ _BASE_PATH=/usr/local
 _GITHUB_REPO=containerd/nerdctl
 
 ## Install deps
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 for c in curl jq tar; do
   which $c &>/dev/null || $INSTALLER $c
 done

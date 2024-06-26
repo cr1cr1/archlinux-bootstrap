@@ -4,7 +4,7 @@ set -u -e -o pipefail
 
 trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
 
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 $INSTALLER nfs-utils nfsidmap cifs-utils
 
 SERVICE_DIR=/usr/local/lib/systemd/system

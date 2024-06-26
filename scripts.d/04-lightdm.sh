@@ -9,7 +9,7 @@ if who | grep -P '\(:[0-9]+\)$'; then
   exit 0
 fi
 
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 $INSTALLER lightdm lightdm-slick-greeter xorg-xauth xorg-server-xephyr plymouth
 ## Uninstall the default greeter
 sudo pacman -Q lightdm-gtk-greeter &>/dev/null && sudo pacman -R --nosave --noconfirm lightdm-gtk-greeter

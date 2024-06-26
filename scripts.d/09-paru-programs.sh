@@ -64,7 +64,7 @@ fi
 }
 
 ## Deps
-which paru &>/dev/null || "${BASH_SOURCE%/*}/08-paru.sh"
+which paru &>/dev/null || "${BASH_SOURCE%/*}/00-paru.sh"
 
 for k in 8DFE60B7327D52D6 93BDB53CD4EBC740; do
   gpg --list-keys "$k" &>/dev/null || gpg --keyserver hkps://pgp.surf.nl --recv-key "$k"
@@ -82,7 +82,7 @@ for f in $LISTS; do
     echo " + Installing $line"
 
     # shellcheck disable=SC2086
-    paru -Sy --noconfirm $line
+    paru -Sy --noconfirm --needed $line
 
     func="configure_${line/\//_}"
     type -t "$func" &>/dev/null && eval "$func"

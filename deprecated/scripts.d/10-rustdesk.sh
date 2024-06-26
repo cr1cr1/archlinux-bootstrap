@@ -8,7 +8,7 @@ _BIN_NAME=rustdesk
 _GITHUB_REPO=rustdesk/rustdesk
 
 ## Install deps
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 for c in curl jq; do
   which $c &>/dev/null || $INSTALLER $c
 done
