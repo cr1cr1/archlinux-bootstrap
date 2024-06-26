@@ -63,6 +63,13 @@ configure_rustdesk-bin() {
 fi
 }
 
+configure_sunshine-bin() {
+  SUNSHINE_PATH=$(readlink -f "$(which sunshine)")
+  set -x
+  sudo setcap cap_sys_admin+p "$SUNSHINE_PATH"
+  { set +x; } 2>/dev/null
+}
+
 ## Deps
 which paru &>/dev/null || "${BASH_SOURCE%/*}/00-paru.sh"
 

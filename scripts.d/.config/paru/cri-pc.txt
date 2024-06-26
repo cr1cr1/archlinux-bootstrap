@@ -5,3 +5,4 @@ proton
 steam
 steamcmd
 steam-tui
+sunshine-bin
