@@ -5,7 +5,7 @@ set -u -e -o pipefail
 trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
 
 ## Install deps
-INSTALLER='sudo pacman -Sy --noconfirm'
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
 for p in jq curl lshw; do
   which "$p" &> /dev/null || $INSTALLER "$p"
 done
