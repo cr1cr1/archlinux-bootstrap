@@ -25,8 +25,8 @@ fi
 
 ## Download and install
 _DOWNLOAD_URL=$(jq -r '.assets[] | select(.name | test("'"$(uname -m)"'")).browser_download_url' <<< "$_LATEST_JSON" | head -1)
-sudo curl -L "$_DOWNLOAD_URL" | \
-  tar -xf - --zstd -C "${_BIN_DEST}" paru
+curl -L "$_DOWNLOAD_URL" | \
+  sudo tar -xf - --zstd -C "${_BIN_DEST}" paru
 
 ## Post install
 paru -Su --noconfirm
