@@ -35,7 +35,7 @@ valid users = @$SMB_DEFAULT_GROUP
 public = no
 writable = yes
 !
-done < "${BASH_SOURCE%/*}/.config/mounts/$(hostname).winmounts"
+done < "${BASH_SOURCE%/*}/.config/mounts/$(hostname).winmounts" || true
 
 ## Post configuration
 sudo cp -uvrnd "${BASH_SOURCE%/*}/etc/samba" /etc/
