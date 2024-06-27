@@ -10,7 +10,7 @@ _GITHUB_REPO=Morganamilo/paru
 
 ## Install deps
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
-for c in curl jq tar; do
+for c in curl jq tar debugedit fakeroot; do
   which $c &>/dev/null || $INSTALLER $c
 done
 
