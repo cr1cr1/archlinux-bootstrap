@@ -19,7 +19,7 @@ GREETER_SESSION=lightdm-slick-greeter
 ## Enable the service
 sudo systemctl enable lightdm
 
-sudo cp -uva "${BASH_SOURCE%/*}/etc/lightdm" /etc/
+sudo cp -uvrnd "${BASH_SOURCE%/*}/etc/lightdm" /etc/
 
 # shellcheck disable=SC1091
 . "${BASH_SOURCE%/*}/../_initool.sh"

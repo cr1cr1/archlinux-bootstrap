@@ -27,6 +27,6 @@ curl -L 'https://code.visualstudio.com/sha/download?build=stable&os=linux-x64' |
 
 DESKTOP_FILE_DIR=/usr/local/share/applications
 [[ ! -d "$DESKTOP_FILE_DIR" ]] && sudo mkdir -p "$DESKTOP_FILE_DIR"
-sudo cp -uva "${BASH_SOURCE%/*}/usr/local/share/applications/vscode.desktop" "$DESKTOP_FILE_DIR"
+sudo cp -uvrnd "${BASH_SOURCE%/*}/usr/local/share/applications/vscode.desktop" "$DESKTOP_FILE_DIR"
 
 sudo update-desktop-database

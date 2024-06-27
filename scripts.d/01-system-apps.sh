@@ -29,7 +29,7 @@ $INSTALLER mc tldr \
 
 ## System files
 for d in etc usr; do
-  sudo cp -uvan "${BASH_SOURCE%/*}/$d" /
+  sudo cp -uvrnd "${BASH_SOURCE%/*}/$d" /
 done
 
 ## Post install

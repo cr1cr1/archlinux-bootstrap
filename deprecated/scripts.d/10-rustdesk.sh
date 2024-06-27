@@ -31,7 +31,7 @@ if [[ -d "${BASH_SOURCE%/*}/.config/$_BIN_NAME" ]]; then
     ## is a sudoer?
     sudo -lU "$user" | grep -q 'not allowed' && continue
     homedir=$(cut -d: -f6 <<< "$line")
-    sudo cp -uva "${BASH_SOURCE%/*}/.config/$_BIN_NAME" "$homedir/.config/" || continue
+    sudo cp -uvrnd "${BASH_SOURCE%/*}/.config/$_BIN_NAME" "$homedir/.config/" || continue
     sudo chown -R "$user" "$homedir/.config/$_BIN_NAME"
   done < <(getent passwd | grep -v nologin)
 fi

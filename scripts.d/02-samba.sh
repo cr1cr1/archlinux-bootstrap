@@ -38,7 +38,7 @@ writable = yes
 done < "${BASH_SOURCE%/*}/.config/mounts/$(hostname).winmounts"
 
 ## Post configuration
-sudo cp -uva "${BASH_SOURCE%/*}/etc/samba" /etc/
+sudo cp -uvrnd "${BASH_SOURCE%/*}/etc/samba" /etc/
 
 for f in $(fd '\.conf$' "$SMB_CONF_DIR"); do
   CONF_FILE="$f"
