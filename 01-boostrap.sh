@@ -28,6 +28,8 @@ $INI_CMD options RemoteFileSigLevel Optional | sudo tee /etc/pacman.conf >/dev/n
 ## Enable multilib (32bit repo)
 $INI_CMD multilib Include /etc/pacman.d/mirrorlist | sudo tee /etc/pacman.conf >/dev/null
 
+## Crude efi check
+[[ -d /sys/firmware/efi/efivars ]] || exit 0
 ## Grub
 which grub-install &>/dev/null || $INSTALLER grub
 [[ -d /boot/grub ]] || sudo mkdir -p /boot/grub
