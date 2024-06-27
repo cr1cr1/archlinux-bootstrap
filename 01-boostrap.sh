@@ -4,11 +4,16 @@ set -u -e -o pipefail
 
 trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
 
+if [[ $EUID -ne 0 ]]; then
+  echo "This script must be run as root" 1>&2
+  exit 1
+fi
+
 pacman-key --init
 pacman-key --populate archlinux
 # pacman-key --refresh-keys
 
-INSTALLER='sudo pacman -Sy --noconfirm --needed'
+INSTALLER='pacman -Sy --noconfirm --needed'
 ## Install deps
 for c in sudo sed grep efibootmgr os-prober; do
   which $c &>/dev/null || $INSTALLER $c
