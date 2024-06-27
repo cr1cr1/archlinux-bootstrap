@@ -40,7 +40,7 @@ for p in arandr xauth; do
 done
 
 ## Get magic cookie for the lightdm user
-COOKIE=$(sudo -u lightdm xauth list | grep 'unix:0' | awk '{print $3}')
+COOKIE=$(sudo -u lightdm xauth list | grep 'unix:0' | awk '{print $3}') || exit 0
 [[ -n "$COOKIE" ]] && sudo xauth add :0 . "$COOKIE"
 
 ## Get the highest resolution and refresh rate for the primary display
