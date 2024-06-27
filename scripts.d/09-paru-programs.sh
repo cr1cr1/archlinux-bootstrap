@@ -51,16 +51,18 @@ configure_gnome-ssh-askpass4-git() {
 configure_rustdesk-bin() {
   _BIN_NAME=rustdesk
   if [[ -d "${BASH_SOURCE%/*}/.config/$_BIN_NAME" ]]; then
-  ## Local users with sudo rights
-  while IFS= read -r line; do
-    user=$(cut -d: -f1 <<< "$line")
-    ## is a sudoer?
-    sudo -lU "$user" | grep -q 'not allowed' && continue
-    homedir=$(cut -d: -f6 <<< "$line")
-    sudo cp -uvrnd "${BASH_SOURCE%/*}/.config/$_BIN_NAME" "$homedir/.config/" || continue
-    sudo chown -R "$user" "$homedir/.config/$_BIN_NAME"
-  done < <(getent passwd | grep -v nologin)
-fi
+    ## Local users with sudo rights
+    while IFS= read -r line; do
+      user=$(cut -d: -f1 <<< "$line")
+      ## is a sudoer?
+      sudo -lU "$user" | grep -q 'not allowed' && continue
+      homedir=$(cut -d: -f6 <<< "$line")
+      sudo cp -uvrnd "${BASH_SOURCE%/*}/.config/$_BIN_NAME" "$homedir/.config/" || continue
+      sudo chown -R "$user" "$homedir/.config/$_BIN_NAME"
+    done < <(getent passwd | grep -v nologin)
+  fi
+  sudo systemctl enable rustdesk
+  sudo systemctl start rustdesk || true
 }
 
 configure_sunshine-bin() {

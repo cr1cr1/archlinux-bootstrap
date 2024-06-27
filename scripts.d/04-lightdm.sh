@@ -62,6 +62,6 @@ $XRANDR_CMD
 sudo chmod +x $XINIT_SCRIPT
 
 ## Write lightdm config
-"${INI_CMD[@]}" -k display-setup-script -v $XINIT_SCRIPT | sudo tee /etc/lightdm/lightdm.conf > /dev/null
+"${INI_CMD[@]}" display-setup-script $XINIT_SCRIPT | sudo tee /etc/lightdm/lightdm.conf > /dev/null
 
 sudo systemctl restart lightdm
