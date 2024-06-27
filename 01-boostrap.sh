@@ -20,7 +20,7 @@ for c in sudo sed grep efibootmgr os-prober zsh; do
 done
 
 ## Sudo setup
-cp -uvan "${BASH_SOURCE%/*}/scripts.d/etc/sudoers.d/sudo.conf" /etc/sudoers.d/
+cp -uvan "${BASH_SOURCE%/*}/scripts.d/etc/sudoers.d/*" /etc/sudoers.d/
 getent group sudo || groupadd sudo
 
 # shellcheck disable=SC1091
