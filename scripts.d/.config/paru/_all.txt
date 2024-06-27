@@ -1,6 +1,7 @@
 #coolercontrol
 
-adwaita-qt5-git adwaita-qt6-git
+adwaita-qt5-git
+adwaita-qt6-git
 albert
 anytype-electron-bin
 atuin
@@ -28,7 +29,10 @@ kopia-bin
 lazydocker-bin
 lazygit
 menulibre
-nemo-compare nemo-mediainfo-tab nemo-meld-compare nemo-qml-plugin-dbus
+nemo-compare
+nemo-mediainfo-tab
+nemo-meld-compare
+nemo-qml-plugin-dbus
 oh-my-posh
 ollama-cuda
 onlyoffice-bin

@@ -88,8 +88,7 @@ for f in $LISTS; do
     printf -- '-%.0s' $(seq 1 "$(tput cols)")
     echo " + Installing $line"
 
-    # shellcheck disable=SC2086
-    paru -Sy --noconfirm --needed $line
+    paru -Sy --noconfirm --needed "$line"
 
     func="configure_${line/\//_}"
     type -t "$func" &>/dev/null && eval "$func"
