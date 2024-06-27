@@ -19,7 +19,7 @@ for c in sudo sed grep efibootmgr os-prober zsh; do
   which $c &>/dev/null || $INSTALLER $c
 done
 
-cp -uvan "${BASH_SOURCE%/*}/etc/sudoers.d/sudo.conf" /etc/sudoers.d/
+cp -uvan "${BASH_SOURCE%/*}/scripts.d/etc/sudoers.d/sudo.conf" /etc/sudoers.d/
 
 # shellcheck disable=SC1091
 . "${BASH_SOURCE%/*}/_initool.sh"
