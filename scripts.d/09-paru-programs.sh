@@ -37,7 +37,7 @@ configure_papirus-folders-catppuccin-git() {
 
 configure_catppuccin-mocha-grub-theme-git() {
   sudo sed -i -E 's,^#*(GRUB_THEME=).+,\1/usr/share/grub/themes/catppuccin-mocha/theme.txt,' /etc/default/grub
-  sudo grub-mkconfig -o /boot/grub/grub.cfg
+  sudo grub-mkconfig -o /boot/grub/grub.cfg || true
 }
 
 configure_gnome-ssh-askpass4-git() {
