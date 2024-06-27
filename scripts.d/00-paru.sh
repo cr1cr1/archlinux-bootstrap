@@ -14,6 +14,8 @@ for c in curl jq tar; do
   which $c &>/dev/null || $INSTALLER $c
 done
 
+sudo pacman -Q binutils &>/dev/null || $INSTALLER binutils
+
 ## Get latest version
 _LATEST_JSON=$(curl -sS "https://api.github.com/repos/${_GITHUB_REPO}/releases/latest")
 _LATEST_VERSION=$(jq -r .tag_name <<< "$_LATEST_JSON")
