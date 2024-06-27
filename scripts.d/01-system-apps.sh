@@ -23,7 +23,7 @@ $INSTALLER mc tldr \
   htop btop atop iotop sysstat ctop strace systemctl-tui i2c-tools lm_sensors hwinfo hddtemp \
   wget curl inetutils net-tools dnsutils mtr trippy gping rsync ssh-tools nmap tcpdump termshark gnu-netcat wireguard-tools networkmanager-openvpn \
   eza gdu duf fd fzf skim lsof tree lnav xfsprogs \
-  tmux zsh zsh-syntax-highlighting less bat zoxide stern screenfetch \
+  tmux zsh zsh-syntax-highlighting less bat zoxide stern screenfetch socat \
   scrcpy android-tools \
   debugedit fakeroot binutils go python-pip kubectl sops xorriso
 
