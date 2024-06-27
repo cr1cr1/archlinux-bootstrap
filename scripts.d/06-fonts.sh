@@ -22,9 +22,9 @@ for f in JetBrainsMono NerdFontsSymbolsOnly; do
 
   [[ -f "$DOWNLOAD_DEST" ]] || \
     curl -L "https://github.com/${_GITHUB_REPO}/releases/download/${_LATEST_VERSION}/$f.zip" > "$DOWNLOAD_DEST"
-  unzip -o "$DOWNLOAD_DEST" -d "$DEST"
-  echo "$_LATEST_VERSION" > "$DEST/version"
+  sudo unzip -o "$DOWNLOAD_DEST" -d "$DEST"
+  echo "$_LATEST_VERSION" | sudo tee "$DEST/version"
   rm -f "$DOWNLOAD_DEST"
 done
 
-fc-cache -f
+sudo fc-cache -f
