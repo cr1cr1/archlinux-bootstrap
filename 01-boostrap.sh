@@ -19,25 +19,27 @@ for c in sudo sed grep efibootmgr os-prober zsh; do
   which $c &>/dev/null || $INSTALLER $c
 done
 
+cp -uvan "${BASH_SOURCE%/*}/etc/sudoers.d/sudo.conf" /etc/sudoers.d/
+
 # shellcheck disable=SC1091
 . "${BASH_SOURCE%/*}/_initool.sh"
-sudo cp /etc/pacman.conf{,."$(date +%F_%H%M%S)"}
+cp /etc/pacman.conf{,."$(date +%F_%H%M%S)"}
 INI_CMD="ini --pass-through set /etc/pacman.conf"
 ## Relax pacman signature requirement. DAGNER!
-$INI_CMD options RemoteFileSigLevel Optional | sudo tee /etc/pacman.conf >/dev/null
+$INI_CMD options RemoteFileSigLevel Optional | tee /etc/pacman.conf >/dev/null
 ## Enable multilib (32bit repo)
-$INI_CMD multilib Include /etc/pacman.d/mirrorlist | sudo tee /etc/pacman.conf >/dev/null
+$INI_CMD multilib Include /etc/pacman.d/mirrorlist | tee /etc/pacman.conf >/dev/null
 
 ## Crude efi check
 efibootmgr || exit 0
 ## Grub
 which grub-install &>/dev/null || $INSTALLER grub
-[[ -d /boot/grub ]] || sudo mkdir -p /boot/grub
+[[ -d /boot/grub ]] || mkdir -p /boot/grub
 ## Enable OS prober
-sudo sed -i -E 's,#*(GRUB_DISABLE_OS_PROBER=).*,\1false,' /etc/default/grub
+sed -i -E 's,#*(GRUB_DISABLE_OS_PROBER=).*,\1false,' /etc/default/grub
 ## Enable Intel iommu
-sudo grep -q 'intel_iommu=on' /etc/default/grub || \
-  sudo sed -i -E 's,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^"]+),\1 intel_iommu=on,' /etc/default/grub
+grep -q 'intel_iommu=on' /etc/default/grub || \
+  sed -i -E 's,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^"]+),\1 intel_iommu=on,' /etc/default/grub
 ## Install grub
-sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ArchLinux
-sudo grub-mkconfig -o /boot/grub/grub.cfg
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ArchLinux
+grub-mkconfig -o /boot/grub/grub.cfg
