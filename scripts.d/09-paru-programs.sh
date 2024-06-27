@@ -73,7 +73,7 @@ configure_sunshine-bin() {
 ## Deps
 which paru &>/dev/null || "${BASH_SOURCE%/*}/00-paru.sh"
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
-for c in debugedit fakeroot; do
+for c in debugedit fakeroot gcc make pkgconf; do
   which $c &>/dev/null || $INSTALLER $c
 done
 sudo pacman -Q binutils &>/dev/null || $INSTALLER binutils
@@ -93,7 +93,7 @@ for f in $LISTS; do
     printf -- '-%.0s' $(seq 1 "$(tput cols)")
     echo " + Installing $line"
 
-    paru -Sy --noconfirm --needed "$line"
+    paru -Sy --noconfirm --needed "$line" || continue
 
     func="configure_${line/\//_}"
     type -t "$func" &>/dev/null && eval "$func"
