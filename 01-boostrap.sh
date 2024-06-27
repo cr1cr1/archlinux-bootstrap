@@ -15,7 +15,7 @@ pacman-key --populate archlinux
 
 INSTALLER='pacman -Sy --noconfirm --needed'
 ## Install deps
-for c in sudo sed grep efibootmgr os-prober; do
+for c in sudo sed grep efibootmgr os-prober zsh; do
   which $c &>/dev/null || $INSTALLER $c
 done
 
