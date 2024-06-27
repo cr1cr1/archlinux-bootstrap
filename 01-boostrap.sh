@@ -19,6 +19,8 @@ for c in sudo sed grep efibootmgr os-prober zsh; do
   which $c &>/dev/null || $INSTALLER $c
 done
 
+pacman -Q systemd || $INSTALLER systemd
+
 ## Sudo setup
 cp -uvan "${BASH_SOURCE%/*}/scripts.d/etc/sudoers.d/*" /etc/sudoers.d/
 getent group sudo || groupadd sudo
