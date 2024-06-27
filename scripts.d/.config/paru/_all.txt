@@ -41,6 +41,8 @@ rustdesk-bin
 scribus
 signal-desktop
 superfile-bin
+sysz
 teams
 ttf-quicksand-variable
+ventoy-bin
 zsh-autocomplete

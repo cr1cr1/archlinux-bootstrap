@@ -4,9 +4,15 @@ set -u -e -o pipefail
 
 trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
 
-sudo pacman-key --init
-sudo pacman-key --populate archlinux
-# sudo pacman-key --refresh-keys
+pacman-key --init
+pacman-key --populate archlinux
+# pacman-key --refresh-keys
+
+INSTALLER='sudo pacman -Sy --noconfirm --needed'
+## Install deps
+for c in sudo sed grep efibootmgr os-prober; do
+  which $c &>/dev/null || $INSTALLER $c
+done
 
 # shellcheck disable=SC1091
 . "${BASH_SOURCE%/*}/_initool.sh"
@@ -16,12 +22,6 @@ INI_CMD="ini --pass-through set /etc/pacman.conf"
 $INI_CMD options RemoteFileSigLevel Optional | sudo tee /etc/pacman.conf >/dev/null
 ## Enable multilib (32bit repo)
 $INI_CMD multilib Include /etc/pacman.d/mirrorlist | sudo tee /etc/pacman.conf >/dev/null
-
-INSTALLER='sudo pacman -Sy --noconfirm --needed'
-## Install deps
-for c in sed grep efibootmgr os-prober; do
-  which $c &>/dev/null || $INSTALLER $c
-done
 
 ## Grub
 which grub-install &>/dev/null || $INSTALLER grub

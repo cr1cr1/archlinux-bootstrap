@@ -7,6 +7,7 @@ trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
 _BIN_NAME=initool
 _BIN_DEST=/usr/local/bin
 _GITHUB_REPO=dbohdan/initool
+# _GITHUB_REPO=JFryy/qq
 
 ## Install deps
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
