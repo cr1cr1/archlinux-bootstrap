@@ -77,8 +77,8 @@ which paru &>/dev/null || "${BASH_SOURCE%/*}/00-paru.sh"
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
 sudo pacman -Q base-devel &>/dev/null || $INSTALLER base-devel
 
-for k in 8DFE60B7327D52D6 93BDB53CD4EBC740; do
-  gpg --list-keys "$k" &>/dev/null || gpg --keyserver hkps://pgp.surf.nl --recv-key "$k"
+for k in 8DFE60B7327D52D6 93BDB53CD4EBC740 F4A7678C9C6B0B2B; do
+  gpg --list-keys "$k" &>/dev/null || gpg --keyserver keyserver.ubuntu.com --recv-key "$k"
 done
 
 ## Install programs with paru
