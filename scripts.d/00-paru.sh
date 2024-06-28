@@ -14,7 +14,9 @@ for c in curl jq tar debugedit fakeroot gcc make pkgconf; do
   which $c &>/dev/null || $INSTALLER $c
 done
 
-sudo pacman -Q binutils &>/dev/null || $INSTALLER binutils
+for c in binutils autoconf; do
+  sudo pacman -Q $c &>/dev/null || $INSTALLER $c
+done
 
 ## Get latest version
 _LATEST_JSON=$(curl -sS "https://api.github.com/repos/${_GITHUB_REPO}/releases/latest")
