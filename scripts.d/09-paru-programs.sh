@@ -75,13 +75,7 @@ configure_sunshine-bin() {
 ## Deps
 which paru &>/dev/null || "${BASH_SOURCE%/*}/00-paru.sh"
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
-for c in debugedit fakeroot gcc make pkgconf; do
-  which $c &>/dev/null || $INSTALLER $c
-done
-
-for c in binutils autoconf; do
-  sudo pacman -Q $c &>/dev/null || $INSTALLER $c
-done
+sudo pacman -Q base-devel &>/dev/null || $INSTALLER base-devel
 
 for k in 8DFE60B7327D52D6 93BDB53CD4EBC740; do
   gpg --list-keys "$k" &>/dev/null || gpg --keyserver hkps://pgp.surf.nl --recv-key "$k"

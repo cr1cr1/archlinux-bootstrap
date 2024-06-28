@@ -10,13 +10,11 @@ _GITHUB_REPO=Morganamilo/paru
 
 ## Install deps
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
-for c in curl jq tar debugedit fakeroot gcc make pkgconf; do
+for c in curl jq tar; do
   which $c &>/dev/null || $INSTALLER $c
 done
 
-for c in binutils autoconf; do
-  sudo pacman -Q $c &>/dev/null || $INSTALLER $c
-done
+sudo pacman -Q base-devel &>/dev/null || $INSTALLER base-devel
 
 ## Get latest version
 _LATEST_JSON=$(curl -sS "https://api.github.com/repos/${_GITHUB_REPO}/releases/latest")
