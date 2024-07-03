@@ -16,6 +16,7 @@ dust
 fan2go-git
 fan2go-tui-git
 fluxcd
+fswatch
 fzf-tab-completion-git
 git-credential-keepassxc
 glow

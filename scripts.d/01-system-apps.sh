@@ -20,12 +20,12 @@ fi
 $INSTALLER mc tldr \
   git git-delta jq ripgrep \
   openssh age openssl-1.1 \
-  htop btop atop iotop sysstat ctop strace systemctl-tui i2c-tools lm_sensors hwinfo hddtemp \
-  wget curl inetutils net-tools dnsutils mtr trippy gping rsync ssh-tools nmap tcpdump termshark gnu-netcat wireguard-tools networkmanager-openvpn \
+  htop btop atop iotop sysstat ctop strace watchexec systemctl-tui i2c-tools lm_sensors hwinfo hddtemp \
+  wget curl inetutils net-tools dnsutils mtr trippy gping rsync rclone ssh-tools nmap tcpdump termshark gnu-netcat wireguard-tools networkmanager-openvpn \
   eza gdu duf fd fzf skim lsof tree lnav xfsprogs \
   tmux zsh zsh-syntax-highlighting less bat zoxide stern screenfetch socat \
   scrcpy android-tools \
-  debugedit fakeroot binutils go python-pip kubectl sops xorriso
+  go python-pip kubectl sops xorriso
 
 ## System files
 for d in etc usr; do
