@@ -22,7 +22,7 @@ done
 pacman -Q systemd || $INSTALLER systemd
 
 ## Sudo setup
-cp -uvan "${BASH_SOURCE%/*}/scripts.d/etc/sudoers.d/*" /etc/sudoers.d/
+cp -ruvn "${BASH_SOURCE%/*}/scripts.d/etc/sudoers.d/" /etc/
 getent group sudo || groupadd sudo
 
 # shellcheck disable=SC1091
