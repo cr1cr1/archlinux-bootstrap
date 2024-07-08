@@ -46,6 +46,7 @@ rustdesk-bin
 scribus
 signal-desktop
 superfile-bin
+syncthing-gtk
 sysz
 teams
 ttf-quicksand-variable
