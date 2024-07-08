@@ -11,9 +11,8 @@ which paru &>/dev/null || "${BASH_SOURCE%/*}/00-paru.sh"
 which lshw &>/dev/null || $INSTALLER lshw
 
 ## NVIDIA Drivers
-if [[ $(sudo lshw -C video -json | jq -r '.[].vendor') == 'NVIDIA Corporation' ]]; then
-  $INSTALLER nvidia
-  paru -Sy --noconfirm --needed nvidia-patch
+if sudo lshw -C video -json | jq -r '.[].vendor=="NVIDIA Corporation"' | grep -q 'true'; then
+  paru -Sy --noconfirm --needed nvidia nvidia-patch opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia
 fi
 
 ## System apps
@@ -21,8 +20,8 @@ $INSTALLER mc tldr \
   git git-delta jq ripgrep \
   openssh age openssl-1.1 \
   htop btop atop iotop sysstat ctop strace watchexec systemctl-tui i2c-tools lm_sensors hwinfo hddtemp \
-  wget curl inetutils net-tools dnsutils mtr trippy gping rsync rclone ssh-tools nmap tcpdump termshark gnu-netcat wireguard-tools networkmanager-openvpn \
-  eza gdu duf fd fzf skim lsof tree lnav xfsprogs \
+  wget curl inetutils net-tools dnsutils mtr trippy gping rsync rclone syncthing ssh-tools nmap tcpdump termshark gnu-netcat wireguard-tools networkmanager-openvpn \
+  eza gdu duf fd fzf skim lsof tree lnav xfsprogs expac \
   tmux zsh zsh-syntax-highlighting less bat zoxide stern screenfetch socat \
   scrcpy android-tools \
   go python-pip kubectl sops xorriso
