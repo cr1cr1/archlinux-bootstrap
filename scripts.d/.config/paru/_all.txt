@@ -28,6 +28,7 @@ helix
 journal-viewer-bin
 k9s
 kopia-bin
+kopia-ui-bin
 krew-bin
 lazydocker-bin
 lazygit
