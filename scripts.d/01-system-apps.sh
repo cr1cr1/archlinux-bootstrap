@@ -17,7 +17,7 @@ fi
 
 ## System apps
 $INSTALLER mc tldr \
-  git git-delta jq ripgrep htmlq jless xh \
+  git git-delta jq ripgrep htmlq jless xh pv \
   openssh age openssl-1.1 \
   htop btop atop iotop sysstat ctop strace watchexec systemctl-tui i2c-tools lm_sensors hwinfo hddtemp \
   wget curl inetutils net-tools bridge-utils dnsutils mtr trippy gping rsync rclone syncthing ssh-tools nmap tcpdump termshark gnu-netcat wireguard-tools networkmanager-openvpn iptraf-ng \
