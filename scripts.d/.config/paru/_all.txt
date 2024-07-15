@@ -33,6 +33,7 @@ krew-bin
 lazydocker-bin
 lazygit
 menulibre
+mise-bin
 mprocs-bin
 nemo-compare
 nemo-mediainfo-tab
