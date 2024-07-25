@@ -2,7 +2,7 @@
 
 set -u -e -o pipefail
 
-trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
+trap 'echo Script $BASH_SOURCE failed at line $LINENO with retcode $?' ERR TERM
 
 ## Fixes rendering issues with WebKitGTK based apps like Whatsapp, Minigalaxy, Journal Viewer
 grep -qP '^WEBKIT_DISABLE_DMABUF_RENDERER' /etc/environment || \

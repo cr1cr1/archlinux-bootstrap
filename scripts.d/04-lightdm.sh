@@ -2,7 +2,7 @@
 
 set -u -e -o pipefail
 
-trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
+trap 'echo Script $BASH_SOURCE failed at line $LINENO with retcode $?' ERR TERM
 
 if who | grep -P '\(:[0-9]+\)$'; then
   echo "An X user session is active, run this in 'runlevel 3' or with no sessions and lightdm stopped"

@@ -2,7 +2,7 @@
 
 set -u -e -o pipefail
 
-trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
+trap 'echo Script $BASH_SOURCE failed at line $LINENO with retcode $?' ERR TERM
 
 GO_VERSION=${GO_VERSION:-go1.22.4}
 GO_HOME="${GO_HOME:-/usr/local/go}"

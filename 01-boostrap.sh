@@ -2,7 +2,7 @@
 
 set -u -e -o pipefail
 
-trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
+trap 'echo Script $BASH_SOURCE failed at line $LINENO with retcode $?' ERR TERM
 
 if [[ $EUID -ne 0 ]]; then
   echo "This script must be run as root" 1>&2

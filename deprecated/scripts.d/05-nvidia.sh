@@ -2,7 +2,7 @@
 
 set -u -e -o pipefail
 
-trap 'echo Script failed at line $LINENO with retcode $?' ERR TERM
+trap 'echo Script $BASH_SOURCE failed at line $LINENO with retcode $?' ERR TERM
 
 ## Install deps
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
