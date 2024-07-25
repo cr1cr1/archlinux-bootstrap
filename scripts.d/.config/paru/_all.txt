@@ -5,6 +5,7 @@ adwaita-qt6-git
 albert
 anytype-electron-bin
 atuin
+bcompare-nautilus
 bibata-cursor-theme
 brave-bin
 budgie-extras
@@ -14,6 +15,7 @@ catppuccin-mocha-grub-theme-git
 d2
 dasel-bin
 dust
+eget-bin
 fan2go-git
 fan2go-tui-git
 fluxcd
@@ -53,7 +55,7 @@ rnr-bin
 rustdesk-bin
 scribus
 signal-desktop
-so
+so-bin
 superfile-bin
 syncthing-gtk
 sysz
