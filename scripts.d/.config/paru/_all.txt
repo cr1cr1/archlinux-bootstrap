@@ -57,6 +57,8 @@ scribus
 signal-desktop
 so-bin
 superfile-bin
+surrealdb-bin
+surrealist-bin
 syncthing-gtk
 sysz
 teams
