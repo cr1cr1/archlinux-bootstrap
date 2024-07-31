@@ -49,6 +49,7 @@ onlyoffice-bin
 openlens-bin
 orchis-theme
 p7zip-gui
+pacpreview
 papirus-folders-catppuccin-git
 parui
 rnr-bin
