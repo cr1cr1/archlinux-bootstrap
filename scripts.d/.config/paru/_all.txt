@@ -67,4 +67,5 @@ ttf-quicksand-variable
 ventoy-bin
 viddy-bin
 wuzz-bin
+yazi
 zsh-autocomplete
