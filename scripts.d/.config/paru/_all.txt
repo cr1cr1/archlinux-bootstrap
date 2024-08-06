@@ -26,7 +26,6 @@ glow
 gnome-ssh-askpass4-git
 go-mtpfs-git
 go-yq
-helix
 journal-viewer-bin
 k9s
 kopia-bin
@@ -68,4 +67,5 @@ ventoy-bin
 viddy-bin
 wuzz-bin
 yazi
+zed
 zsh-autocomplete
