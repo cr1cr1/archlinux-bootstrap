@@ -51,6 +51,8 @@ p7zip-gui
 pacpreview
 papirus-folders-catppuccin-git
 parui
+posting
+resources
 rnr-bin
 rustdesk-bin
 scribus
