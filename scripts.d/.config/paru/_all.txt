@@ -32,6 +32,7 @@ k9s
 kopia-bin
 kopia-ui-bin
 krew-bin
+kvantum-theme-catppuccin-git
 lazydocker-bin
 lazygit
 menulibre
