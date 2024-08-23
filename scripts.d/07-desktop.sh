@@ -20,7 +20,7 @@ $INSTALLER budgie network-manager-applet papirus-icon-theme budgie-desktop-view 
   gvfs-smb appmenu-gtk-module dconf-editor font-manager xorg-xhost qt5ct qt6ct kvantum \
   eog-plugins libheif evince strawberry vlc obs-studio xcolor \
   meld nemo-preview nemo-share nemo-theme-glacier \
-  gedit baobab doublecmd-qt6 libunrar freerdp remmina transmission-remote-gtk grsync gparted gsmartcontrol xarchiver \
+  gedit baobab doublecmd-qt6 libunrar freerdp remmina transgui-qt grsync gparted gsmartcontrol xarchiver \
   keepassxc x11-ssh-askpass \
   openrgb \
   thunderbird \
