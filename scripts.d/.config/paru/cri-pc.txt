@@ -1,7 +1,6 @@
 bottles
-lutris
 mangohud
-proton
+protonplus
 steam
 steamcmd
 steam-tui-bin
