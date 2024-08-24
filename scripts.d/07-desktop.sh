@@ -16,7 +16,7 @@ grep -qP '^QT_QPA_PLATFORMTHEME' /etc/environment || \
 
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
 $INSTALLER budgie network-manager-applet papirus-icon-theme budgie-desktop-view arc-gtk-theme \
-  gnome-themes-extra gnome-console kitty gnome-calculator gnome-system-monitor gnome-keyring gnome-packagekit gnome-logs \
+  gnome-themes-extra gnome-console kitty gnome-calculator gnome-system-monitor gnome-keyring gnome-logs \
   gvfs-smb appmenu-gtk-module dconf-editor font-manager xorg-xhost qt5ct qt6ct kvantum \
   eog-plugins libheif evince strawberry vlc obs-studio xcolor \
   meld nemo-preview nemo-share nemo-theme-glacier \
