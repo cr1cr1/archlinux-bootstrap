@@ -4,5 +4,5 @@ mangohud
 proton
 steam
 steamcmd
-steam-tui
+steam-tui-bin
 sunshine-bin
