@@ -52,6 +52,7 @@ onlyoffice-bin
 openlens-bin
 orchis-theme
 p7zip-gui
+pack-cli
 pacpreview
 papirus-folders-catppuccin-git
 parui
