@@ -1,4 +1,7 @@
 bottles
+## https://www.protondb.com/help/improving-performance
+gamemode
+lib32-gamemode
 mangohud
 protonplus
 steam
