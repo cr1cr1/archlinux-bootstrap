@@ -85,16 +85,19 @@ done
 SCRIPT_PATH=$(readlink -f "${BASH_SOURCE[0]}")
 DEFAULT_LISTS_PATH=${SCRIPT_PATH%/*}/.config/paru
 LISTS="${*:-$DEFAULT_LISTS_PATH/_all.txt $DEFAULT_LISTS_PATH/$(hostname).txt}"
+
+# shellcheck disable=SC2046,SC2086
+paru -Sy --noconfirm --needed $(cat $LISTS | grep -v '^#' | tr '\n' ' ')
+
 for f in $LISTS; do
   [[ -f "$f" ]] || continue
   while IFS= read -r line; do
     [[ -z "$line" || "$line" =~ ^# ]] && continue
-    printf -- '-%.0s' $(seq 1 "$(tput cols)")
-    echo " + Installing $line"
-
-    paru -Sy --noconfirm --needed "$line" || continue
-
     func="configure_${line/\//_}"
-    type -t "$func" &>/dev/null && eval "$func"
+    if type -t "$func" &>/dev/null; then
+      printf -- '-%.0s' $(seq 1 "$(tput cols)")
+      echo " + Configuring $line"
+      eval "$func"
+    fi
   done < "$f"
 done
