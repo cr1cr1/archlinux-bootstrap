@@ -19,7 +19,7 @@ $INSTALLER budgie network-manager-applet papirus-icon-theme budgie-desktop-view 
   gnome-themes-extra gnome-console kitty gnome-calculator gnome-system-monitor gnome-keyring gnome-logs \
   gvfs-smb appmenu-gtk-module dconf-editor font-manager xorg-xhost qt5ct qt6ct kvantum \
   eog-plugins libheif evince strawberry vlc obs-studio xcolor \
-  meld nemo-preview nemo-share nemo-theme-glacier \
+  meld nemo-preview nemo-share nemo-theme-glacier nemo-fileroller \
   gedit baobab doublecmd-qt6 libunrar freerdp remmina transgui-qt grsync gparted gsmartcontrol xarchiver \
   keepassxc x11-ssh-askpass \
   openrgb \
