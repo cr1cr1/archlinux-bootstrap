@@ -44,7 +44,6 @@ nemo-mediainfo-tab
 nemo-meld-compare
 nemo-qml-plugin-dbus
 neoss
-notepad++
 ocenaudio-bin
 oh-my-posh-bin
 ollama-cuda
