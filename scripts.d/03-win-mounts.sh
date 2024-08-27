@@ -36,7 +36,8 @@ Where=$WHERE
 #Type=ntfs-3g
 #Options=auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=077,dev,exec,noatime,iocharset=utf8,windows_names,big_writes,suid
 Type=ntfs3
-Options=auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=027,dev,exec,noatime,iocharset=utf8,windows_names,suid
+## https://docs.kernel.org/filesystems/ntfs3.html
+Options=auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=027,dev,exec,noatime,iocharset=utf8,windows_names,suid,discard
 
 [Install]
 WantedBy=multi-user.target
