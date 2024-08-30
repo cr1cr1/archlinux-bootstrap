@@ -8,6 +8,7 @@ atuin
 bcompare-nautilus
 bibata-cursor-theme
 brave-bin
+btop-theme-catppuccin
 budgie-extras
 calibre
 catppuccin-gtk-theme-mocha
