@@ -72,6 +72,25 @@ configure_sunshine-bin() {
   { set +x; } 2>/dev/null
 }
 
+configure_btop-theme-catppuccin() {
+  if [[ $EUID -ne 0 ]]; then
+    [[ -d "$HOME/.config/btop" ]] || \
+      { set -x; mkdir -p "$HOME/.config/btop"; { set +x; } 2>/dev/null; }
+    [[ -f "$HOME/.config/btop/btop.conf" ]] || \
+      { set -x; cp "${BASH_SOURCE%/*}/.config/btop/btop.conf" "$HOME/.config/btop/"; { set +x; } 2>/dev/null; }
+    return
+  fi
+  while IFS= read -r line; do
+    user=$(cut -d: -f1 <<< "$line")
+    user_home=$(cut -d: -f6 <<< "$line")
+    [[ -d "$user_home" && "$user_home" != "/"  ]] || continue
+    [[ -d "$user_home/.config/btop" ]] || \
+      { set -x; sudo -u "$user" -- mkdir -p "$user_home/.config/btop"; { set +x; } 2>/dev/null; }
+    [[ -f "$user_home/.config/btop/btop.conf" ]] || \
+      { set -x; sudo -u "$user" -- cp "${BASH_SOURCE%/*}/.config/btop/btop.conf" "$user_home/.config/btop/"; { set +x; } 2>/dev/null; }
+  done < <(getent passwd | grep -v nologin)
+}
+
 ## Deps
 which paru &>/dev/null || "${BASH_SOURCE%/*}/00-paru.sh"
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
