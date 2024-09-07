@@ -69,6 +69,7 @@ surrealist-bin
 syncthing-gtk
 sysz
 teams
+transgui-qt
 ttf-quicksand-variable
 ventoy-bin
 viddy-bin
