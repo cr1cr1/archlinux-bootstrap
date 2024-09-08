@@ -64,6 +64,7 @@ scribus
 signal-desktop
 so-bin
 superfile-bin
+superproductivity-bin
 surrealdb-bin
 surrealist-bin
 syncthing-gtk
