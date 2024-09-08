@@ -54,6 +54,7 @@ orchis-theme
 p7zip-gui
 pack-cli
 pacpreview
+pacseek-bin
 papirus-folders-catppuccin-git
 parui
 posting
