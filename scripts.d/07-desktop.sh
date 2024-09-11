@@ -15,8 +15,8 @@ grep -qP '^QT_QPA_PLATFORMTHEME' /etc/environment || \
   sudo sed -i -E 's,^[#\s]*(QT_QPA_PLATFORMTHEME).+,\1=qt6ct,' /etc/environment
 
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
-$INSTALLER gdm-settings \
-  gnome-themes-extra gnome-system-monitor gnome-keyring gnome-logs dconf-editor \
+$INSTALLER gdm \
+  gnome-themes-extra gnome-system-monitor gnome-keyring gnome-shell-extensions gnome-control-center gnome-logs dconf-editor \
   gvfs-smb appmenu-gtk-module font-manager xorg-xhost \
   eog-plugins libheif evince strawberry vlc obs-studio xcolor rnote \
   meld nemo-preview nemo-share nemo-theme-glacier nemo-fileroller \
