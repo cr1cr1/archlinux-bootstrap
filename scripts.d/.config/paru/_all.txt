@@ -3,7 +3,7 @@
 adwaita-qt5-git
 adwaita-qt6-git
 albert
-anytype-electron-bin
+anytype-bin
 atuin
 bcompare-nautilus
 bibata-cursor-theme
