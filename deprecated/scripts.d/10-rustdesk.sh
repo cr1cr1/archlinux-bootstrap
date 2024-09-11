@@ -37,5 +37,5 @@ if [[ -d "${BASH_SOURCE%/*}/.config/$_BIN_NAME" ]]; then
 fi
 
 sudo systemctl daemon-reload
-sudo systemctl enable rustdesk
-sudo systemctl restart rustdesk
+sudo systemctl disable rustdesk
+# sudo systemctl restart rustdesk
