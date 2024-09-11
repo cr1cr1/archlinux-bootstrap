@@ -15,14 +15,18 @@ grep -qP '^QT_QPA_PLATFORMTHEME' /etc/environment || \
   sudo sed -i -E 's,^[#\s]*(QT_QPA_PLATFORMTHEME).+,\1=qt6ct,' /etc/environment
 
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
-$INSTALLER budgie network-manager-applet papirus-icon-theme budgie-desktop-view arc-gtk-theme \
-  gnome-themes-extra gnome-console kitty gnome-calculator gnome-system-monitor gnome-keyring gnome-logs \
-  gvfs-smb appmenu-gtk-module dconf-editor font-manager xorg-xhost qt5ct qt6ct kvantum \
+$INSTALLER gdm-settings \
+  gnome-themes-extra gnome-system-monitor gnome-keyring gnome-logs dconf-editor \
+  gvfs-smb appmenu-gtk-module font-manager xorg-xhost \
   eog-plugins libheif evince strawberry vlc obs-studio xcolor rnote \
   meld nemo-preview nemo-share nemo-theme-glacier nemo-fileroller \
-  gedit baobab doublecmd-qt6 libunrar freerdp remmina grsync gparted gsmartcontrol xarchiver \
+  gedit baobab doublecmd-qt6 \
+  nm-connection-editor freerdp remmina grsync gparted gsmartcontrol \
+  libunrar xarchiver \
+  qt5ct qt6ct kvantum papirus-icon-theme \
   keepassxc x11-ssh-askpass \
   openrgb \
   thunderbird \
   virt-manager qemu-desktop \
-  discord
+  discord \
+  kitty
