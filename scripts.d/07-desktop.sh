@@ -30,3 +30,8 @@ $INSTALLER gdm \
   virt-manager qemu-desktop \
   discord \
   kitty
+
+## https://wiki.archlinux.org/title/GDM#Wayland_and_the_proprietary_NVIDIA_driver
+UDEV_RULES='/etc/udev/rules.d/61-gdm.rules'
+[[ -L "$UDEV_RULES" ]] || \
+  sudo ln -s /dev/null "$UDEV_RULES"
