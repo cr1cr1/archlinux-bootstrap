@@ -1,5 +1,6 @@
 #coolercontrol
 
+7-zip-bin
 adwaita-qt5-git
 adwaita-qt6-git
 albert
@@ -52,7 +53,6 @@ ollama-cuda
 onlyoffice-bin
 openlens-bin
 orchis-theme
-p7zip-gui
 pack-cli
 pacpreview
 pacseek-bin
