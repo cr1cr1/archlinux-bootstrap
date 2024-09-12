@@ -5,11 +5,12 @@ Name=VSCode
 GenericName=Text Editor
 Comment=Visual Studio Code
 Icon=code
-Exec=/usr/local/vscode/code
+Exec=/usr/local/vscode/code %F
 Actions=NewEmptyWindow;
 MimeType=text/plain;inode/directory;application/x-code-workspace;
 Categories=Development;IDE;TextEditor;
 Keywords=code;vscode;
+StartupNotify=true
 StartupWMClass=Code
 
 [Desktop Action NewEmptyWindow]
