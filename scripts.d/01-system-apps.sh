@@ -25,6 +25,7 @@ $INSTALLER mc tldr \
   tmux zsh zsh-syntax-highlighting less bat zoxide stern screenfetch socat difftastic ueberzug \
   scrcpy android-tools \
   go python-pip kubectl sops xorriso kondo \
+  snap-pac grub-btrfs
 
 ## System files
 for d in etc usr; do

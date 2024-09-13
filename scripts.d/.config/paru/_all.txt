@@ -10,6 +10,7 @@ bcompare-nautilus
 bibata-cursor-theme
 brave-bin
 btop-theme-catppuccin
+btrfs-assistant
 budgie-extras
 calibre
 catppuccin-gtk-theme-mocha
