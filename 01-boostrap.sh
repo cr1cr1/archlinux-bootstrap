@@ -41,6 +41,8 @@ which grub-install &>/dev/null || $INSTALLER grub
 [[ -d /boot/grub ]] || mkdir -p /boot/grub
 ## Enable OS prober
 sed -i -E 's,#*(GRUB_DISABLE_OS_PROBER=).*,\1false,' /etc/default/grub
+## Set resolution
+sed -i -E 's,#*(GRUB_GFXMODE=).*,\11920x1080x32,auto,' /etc/default/grub
 ## Enable Intel iommu
 grep -q 'intel_iommu=on' /etc/default/grub || \
   sed -i -E 's,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^"]+),\1 intel_iommu=on,' /etc/default/grub
