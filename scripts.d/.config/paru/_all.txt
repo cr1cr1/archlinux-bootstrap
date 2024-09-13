@@ -58,6 +58,7 @@ pacpreview
 pacseek-bin
 papirus-folders-catppuccin-git
 parui
+peazip-qt-bin
 posting
 resources
 rnr-bin
