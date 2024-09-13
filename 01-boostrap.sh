@@ -45,7 +45,7 @@ sed -i -E 's,#*(GRUB_DISABLE_OS_PROBER=).*,\1false,' /etc/default/grub
 sed -i -E 's,#*(GRUB_GFXMODE=).*,\11920x1080x32,auto,' /etc/default/grub
 ## Enable Intel iommu
 grep -q 'intel_iommu=on' /etc/default/grub || \
-  sed -i -E 's,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^"]+),\1 intel_iommu=on,' /etc/default/grub
+  sed -i -E 's,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^"]+),\1 intel_iommu=on iommu=pt,' /etc/default/grub
 ## Install grub
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ArchLinux
 grub-mkconfig -o /boot/grub/grub.cfg
