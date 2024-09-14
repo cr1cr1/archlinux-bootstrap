@@ -21,6 +21,7 @@ devbox-bin
 doggo-bin
 dust
 eget-bin
+extension-manager
 fan2go-git
 fan2go-tui-git
 fluxcd
