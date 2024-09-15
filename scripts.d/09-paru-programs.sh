@@ -91,6 +91,31 @@ configure_btop-theme-catppuccin() {
   done < <(getent passwd | grep -v nologin)
 }
 
+configure_yazi() {
+  if [[ $EUID -ne 0 ]]; then
+    ## Plugins
+    for p in full-border smart-filter git chmod max-preview; do
+      set -x
+      ya pack -a yazi-rs/plugins:$p || true
+      { set +x; } 2>/dev/null
+    done
+    ## Flavors
+    for f in catppuccin-mocha catppuccin-frappe catppuccin-macchiato; do
+      set -x
+      ya pack -a yazi-rs/flavors:$f
+      { set +x; } 2>/dev/null
+    done
+    ## Update all
+    set -x
+    ya pack -u || true
+    { set +x; } 2>/dev/null
+    [[ -d ~/.config/yazi ]] || mkdir -p ~/.config/yazi
+    set -x
+    cp -n -f "${SCRIPT_PATH%/*}"/.config/yazi/* ~/.config/yazi/
+    { set +x; } 2>/dev/null
+  fi
+}
+
 ## Deps
 which paru &>/dev/null || "${BASH_SOURCE%/*}/00-paru.sh"
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
