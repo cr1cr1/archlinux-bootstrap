@@ -6,5 +6,4 @@ trap 'echo Script $BASH_SOURCE failed at line $LINENO with retcode $?' ERR TERM
 
 INSTALLER='sudo paru -Sy --noconfirm --needed'
 $INSTALLER hyprland \
-  network-manager-applet waybar
-
+  gum network-manager-applet waybar
