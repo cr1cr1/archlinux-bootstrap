@@ -24,7 +24,7 @@ $INSTALLER gdm \
   nm-connection-editor freerdp remmina grsync gparted gsmartcontrol \
   libunrar xarchiver \
   qt5ct qt6ct kvantum papirus-icon-theme \
-  keepassxc x11-ssh-askpass \
+  keepassxc x11-ssh-askpass xclip wl-clipboard \
   openrgb \
   thunderbird \
   virt-manager qemu-desktop \
