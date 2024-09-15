@@ -94,16 +94,8 @@ configure_btop-theme-catppuccin() {
 configure_yazi() {
   if [[ $EUID -ne 0 ]]; then
     ## Plugins
-    for p in full-border smart-filter git chmod max-preview; do
-      set -x
-      ya pack -a yazi-rs/plugins:$p || true
-      { set +x; } 2>/dev/null
-    done
-    ## Flavors
-    for f in catppuccin-mocha catppuccin-frappe catppuccin-macchiato; do
-      set -x
-      ya pack -a yazi-rs/flavors:$f
-      { set +x; } 2>/dev/null
+    for p in yazi-rs/plugins:full-border yazi-rs/plugins:smart-filter yazi-rs/plugins:git yazi-rs/plugins:chmod yazi-rs/plugins:max-preview yazi-rs/flavors:catppuccin-mocha Ape/open-with-cmd; do
+      { set -x; ya pack -a $p; { set +x; } 2>/dev/null; } || true
     done
     ## Update all
     set -x
