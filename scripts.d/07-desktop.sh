@@ -17,7 +17,7 @@ grep -qP '^QT_QPA_PLATFORMTHEME' /etc/environment || \
 INSTALLER='sudo pacman -Sy --noconfirm --needed'
 $INSTALLER gdm \
   gnome-themes-extra gnome-system-monitor gnome-keyring gnome-shell-extensions gnome-control-center gnome-logs dconf-editor \
-  gvfs-smb appmenu-gtk-module font-manager xorg-xhost \
+  gvfs-smb appmenu-gtk-module font-manager xorg-xhost wmctrl \
   eog-plugins libheif evince strawberry vlc obs-studio xcolor rnote \
   meld nemo-preview nemo-share nemo-theme-glacier nemo-fileroller \
   gedit baobab doublecmd-qt6 \
@@ -28,8 +28,7 @@ $INSTALLER gdm \
   openrgb \
   thunderbird \
   virt-manager qemu-desktop \
-  discord \
-  kitty
+  discord
 
 ## https://wiki.archlinux.org/title/GDM#Wayland_and_the_proprietary_NVIDIA_driver
 UDEV_RULES='/etc/udev/rules.d/61-gdm.rules'

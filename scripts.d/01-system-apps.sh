@@ -21,7 +21,7 @@ $INSTALLER mc tldr \
   openssh age openssl-1.1 \
   htop btop atop iotop sysstat ctop strace watchexec systemctl-tui dmidecode i2c-tools lm_sensors hwinfo hddtemp \
   wget curl inetutils net-tools bridge-utils dnsutils mtr trippy gping rsync rclone syncthing ssh-tools nmap tcpdump termshark gnu-netcat wireguard-tools networkmanager-openvpn iptraf-ng \
-  eza gdu duf fd fzf skim lsof tree lnav xfsprogs expac direnv \
+  kitty eza gdu duf fd fzf skim lsof tree lnav xfsprogs expac direnv \
   tmux zsh zsh-syntax-highlighting less bat zoxide stern screenfetch socat difftastic ueberzug \
   scrcpy android-tools \
   go python-pip kubectl sops xorriso kondo \
