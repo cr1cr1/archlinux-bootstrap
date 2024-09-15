@@ -78,6 +78,7 @@ transgui-qt
 ttf-quicksand-variable
 ventoy-bin
 viddy-bin
+visual-studio-code-bin
 wuzz-bin
 yazi
 zed
