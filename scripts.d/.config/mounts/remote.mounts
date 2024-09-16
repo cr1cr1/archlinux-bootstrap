@@ -1,3 +1,4 @@
 # name what where type
 synology-syn01 synology:/volume1/syn01 /mnt/synology/syn01 nfs
 synology-syn02 synology:/volume2/syn02 /mnt/synology/syn02 nfs
+synology-homes synology:/volume1/homes /mnt/synology/homes nfs
