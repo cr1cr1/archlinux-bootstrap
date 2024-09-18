@@ -12,7 +12,7 @@ which lshw &>/dev/null || $INSTALLER lshw
 
 ## NVIDIA Drivers
 if sudo lshw -C video -json | jq -r '.[].vendor=="NVIDIA Corporation"' | grep -q 'true'; then
-  paru -Sy --noconfirm --needed nvidia nvidia-patch opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia
+  paru -Sy --noconfirm --needed nvidia nvidia-patch opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia libva-nvidia-driver
 fi
 
 ## System apps
