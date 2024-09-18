@@ -41,6 +41,7 @@ lazydocker-bin
 lazygit
 menulibre
 mise-bin
+moonlight-qt-bin
 mprocs-bin
 nemo-compare
 nemo-mediainfo-tab
