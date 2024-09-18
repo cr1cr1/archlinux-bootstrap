@@ -61,8 +61,8 @@ configure_rustdesk-bin() {
       sudo chown -R "$user" "$homedir/.config/$_BIN_NAME"
     done < <(getent passwd | grep -v nologin)
   fi
-  #sudo systemctl enable rustdesk
-  #sudo systemctl start rustdesk || true
+  sudo systemctl disable rustdesk
+  sudo systemctl stop rustdesk || true
 }
 
 configure_sunshine-bin() {
