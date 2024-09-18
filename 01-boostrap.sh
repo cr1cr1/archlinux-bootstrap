@@ -28,7 +28,7 @@ getent group sudo || groupadd sudo
 # shellcheck disable=SC1091
 . "${BASH_SOURCE%/*}/_initool.sh"
 cp /etc/pacman.conf{,."$(date +%F_%H%M%S)"}
-INI_CMD="ini --pass-through set /etc/pacman.conf"
+INI_CMD="initool --pass-through set /etc/pacman.conf"
 ## Relax pacman signature requirement. DAGNER!
 $INI_CMD options RemoteFileSigLevel Optional | tee /etc/pacman.conf >/dev/null
 ## Enable multilib (32bit repo)
