@@ -23,7 +23,7 @@ $INSTALLER gdm \
   gedit baobab doublecmd-qt6 \
   nm-connection-editor freerdp remmina grsync gparted gsmartcontrol \
   libunrar xarchiver \
-  qt5ct qt6ct kvantum papirus-icon-theme \
+  qt5ct qt6ct qt5-wayland qt6-wayland kvantum papirus-icon-theme \
   keepassxc x11-ssh-askpass xclip wl-clipboard \
   openrgb \
   thunderbird \
