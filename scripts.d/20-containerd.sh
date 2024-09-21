@@ -22,7 +22,7 @@ for srv in containerd buildkit; do
   sudo systemctl stop $srv || true
 done
 
-which newuidmap &>/dev/null || $INSTALLER uidmap
+which newuidmap &>/dev/null || $INSTALLER shadow
 
 CMDS=(
   "containerd-rootless-setuptool.sh install"
