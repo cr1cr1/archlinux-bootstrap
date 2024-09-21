@@ -5,6 +5,4 @@ lib32-gamemode
 mangohud
 protonplus
 steam
-steamcmd
-steam-tui-bin
 sunshine-bin
