@@ -1,6 +1,10 @@
 # ArchLinux bootstrapping scripts
 
-This repository contains scripts to bootstrap an ArchLinux installation and most of the software I use as a daily driver
+This repository contains scripts to bootstrap an ArchLinux installation and most of the software I use as a daily driver.
+
+## Deprecated
+
+This repository is deprecated in favor of [pimp-my-arch](https://github.com/thedataflows/pimp-my-arch).
 
 ## Usage
 
